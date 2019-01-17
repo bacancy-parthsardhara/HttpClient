@@ -1,0 +1,110 @@
+<!-- for https://jsonplaceholder.typicode.com/comments -->
+
+<br />
+<div class="row">
+  <div class="col-md-6">
+    <input class="form-control" #namedata />
+  </div>
+  <div class="col-md-6">
+    <button (click)="creatPost(namedata.value); namedata.value=''" class="btn btn-default">Submit</button>
+  </div>
+</div>
+<ul class="list-group">
+  <h3>Created Post</h3>
+  <li *ngFor="let post of dataS" class="list-group-item">
+    <br />Name : {{post.name}}
+    <br />Id : {{post.id}}
+  </li>
+</ul>
+
+
+<!-- for Update--------------------------------------------------------------------------- -->
+
+<br />
+<ul class="list-group">
+  <li *ngFor="let post of datas" class="list-group-item">
+    <div class="row">
+      <div class="col-md-1">
+        <button class="btn btn-defalut" (click)="deletePost(post)">Delete</button>
+      </div>
+      <div class="col-md-1">
+        <button class="btn btn-defalut" (click)="updatePostPatch(post)">Update(Patch)</button>
+      </div>
+      <div class="col-md-1">
+        <button class="btn btn-defalut" (click)="updatePostPut(post)">Update(put)</button>
+      </div>
+    </div>
+    <br />
+    <table class="table table-responsive">
+      <tbody>
+        <tr>
+          <td>{{post.userId}}</td>
+          <td>{{post.id}}</td>
+          <td>{{post.title}}</td>
+          <td>{{post.body}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<!-- <br />
+<ul class="list-group">
+  <li *ngFor="let post of datas" class="list-group-item">
+    <div class="row">
+      <div class="col-md-1">
+          <button class="btn btn-defalut" (click)="deletePost(post)">Delete</button>
+      </div>
+      <div class="col-md-1">
+          <button class="btn btn-defalut" (click)="updatePost(post)">Update</button>        
+        </div>
+    </div><br/>
+    
+    Post Id : {{post.data.id}}
+    firstName : {{post.data.first_name}}
+    lastName : {{post.data.last_name}}
+    avatar : {{post.data.avatar}} </li>
+</ul> -->
+
+<!-- for Delete ......................................................................... -->
+<!-- <h1>Get data</h1>
+<ul class="list-group">
+  <li *ngFor="let post of datas" class="list-group-item">
+    <table  class="table table-responsive">
+      <tbody>
+        <tr>
+          <button class="btn btn-defalut" (click)="deletePost(post)">
+            Delete
+          </button>
+          <td>{{post.albumId}}</td>
+          <td>{{post.id}}</td>
+          <td>@{{post.title}}</td>
+          <td>{{post.url}}</td>
+          <td>{{post.thumbnailUrl}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul> -->
+
+
+
+
+
+
+<!-- for https://reqres.in -->
+
+<!-- <h1>welcome in data</h1>
+<br/>
+<input type="text" class="form-control" (keyup.enter)="creatPost(title)" #title />
+
+<br/><br/><ul class="list-group">
+  
+  <li *ngFor="let post of datas.data" class="list-group-item">
+    <button class="btn btn-defalut" (click)="updatePost(post)">
+      Update
+    </button><br/>
+    <br/>page : {{datas.page}}<br/>per_page : {{datas.per_page}}<br/>total : {{datas.total}}<br/>total_pages : {{datas.total_pages}}
+    <br/>id : {{post.id}}<br/>first_name : {{post.first_name}}<br/>last_name : {{post.last_name}}<br/>avatar : {{post.avatar}}
+  </li>
+</ul> -->

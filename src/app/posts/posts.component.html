@@ -1,0 +1,47 @@
+<h1>welcome in posts</h1> <br/>
+<!-- <input type="text" class="form-control" (keyup.enter)="creatPost(title)" #title />
+
+<br/><br/><ul class="list-group">
+  
+  <li *ngFor="let post of posts.data" class="list-group-item">
+    <button class="btn btn-defalut" (click)="updatePost(post)">
+      Update
+    </button><br/>
+    <br/>page : {{posts.page}}<br/>per_page : {{posts.per_page}}<br/>total : {{posts.total}}<br/>total_pages : {{posts.total_pages}}
+    <br/>id : {{post.id}}<br/>first_name : {{post.first_name}}<br/>last_name : {{post.last_name}}<br/>avatar : {{post.avatar}}
+  </li>
+</ul> -->
+
+<!-- https://jsonplaceholder.typicode.com/comments -->
+<br/>
+<input type="text" class="form-control" (keyup.enter)="creatPost(title)" #title />
+<br/><br/><ul class="list-group">
+  <li *ngFor="let post of posts" class="list-group-item">
+    <button class="btn btn-defalut" (click)="updatePost(post)">
+      Update
+    </button><br/>
+    <!-- <br/>{{post.title}}<br/>{{post.postId}}<br/>{{post.id}}<br/>{{post.name}}<br/>{{post.email}}<br/>{{post.body}}<br/> -->
+
+    <!-- Page : {{posts.page}}
+    Per_page : {{posts.per_page}}
+    Total : {{posts.total}}
+    Total_pages : {{posts.total_pages}} -->
+
+    Post Id : {{post.data.id}}
+    firstName : {{post.data.first_name}}
+    lastName : {{post.data.last_name}}
+    avatar : {{post.data.avatar}}
+  </li> 
+</ul>
+
+
+<!-- for delete -->
+<!-- <br/><br/><ul class="list-group">
+  <li *ngFor="let post of posts" class="list-group-item">
+    <button class="btn btn-defalut" (click)="deletePost(post)">
+      Delete
+    </button>
+    {{post.title}}
+  </li> 
+</ul> -->
+
